@@ -10,7 +10,7 @@ describe('Test Suite for class Reader',() => {
     });
 
     test('2.- Method loadJson, pass param json OK', () => {
-        const result = () => Reader.loadJson('students.json');
+        const result = Reader.loadJson('students.json');
         expect(result).not.toBeUndefined();
         expect(result.length > 0).toBe(true);
     });

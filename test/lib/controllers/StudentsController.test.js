@@ -17,7 +17,7 @@ describe('Suit test for class StudentsController', () => {
         expect(hasattr.call(result, 'length')).toBe(true);
     });
 
-    test('3. Requerimiento 3: consultar todos los estudiantes que tengan credits mayor a 500.', () => {
+    test('3.- Requerimiento 3: consultar todos los estudiantes que tengan credits mayor a 500.', () => {
         let result = StudentsController.getStudentsCreditsGt500();
         expect(result).not.toBeUndefined();
         expect(hasattr.call(result, 'length')).toBe(true); 

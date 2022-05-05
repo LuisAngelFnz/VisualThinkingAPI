@@ -3,7 +3,7 @@ const Reader = require('../../../lib/utils/Reader');
 describe('Test Suite for class Reader',() => {
     test('1.- Method loadJson, pass params null and undefined', () => {
         let callback = () => {Reader.loadJson(null);};
-        expect(callback).toThrow(/Received null/);
+        expect(callback).toThrow(/Received null|argument must be one of type string/);
 
         callback = () => {Reader.loadJson(undefined);};
         expect(callback).toThrow(/Received undefined/);

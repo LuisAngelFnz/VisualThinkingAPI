@@ -12,13 +12,13 @@ describe('Suit test for class StudentsController', () => {
 
     test('2.- Requerimiento 2: consultar los emails de todos los estudiantes que tengan certificación haveCertification', () => {
 
-        let result = StudentsServices.getMailsByhaveCertification();
+        let result = StudentsController.getMailsByhaveCertification();
         expect(result).not.toBeUndefined();
         expect(hasattr(result, 'length')).toBe(true);
     });
 
     test('3. Requerimiento 3: consultar todos los estudiantes que tengan credits mayor a 500.', () => {
-        let result = StudentsServices.getStudentsCreditsGt500();
+        let result = StudentsController.getStudentsCreditsGt500();
         expect(result).not.toBeUndefined();
         expect(hasattr(result, 'length')).toBe(true); 
     });

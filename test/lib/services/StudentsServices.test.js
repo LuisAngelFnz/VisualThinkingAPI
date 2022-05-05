@@ -9,10 +9,10 @@ describe('Suit test for class StudentsServices', () => {
     });
 
     test('2.- Method getMailsByhaveCertification, pass null and undefined params', () => {
-        let callback = () => {StudentsServices.getMailsByhaveCertification(null)};
+        let callback = () => {StudentsServices.getMailsByhaveCertification(null);};
         expect(callback).toThrow(TypeError);
 
-        callback = () => {StudentsServices.getMailsByhaveCertification(undefined)};
+        callback = () => {StudentsServices.getMailsByhaveCertification(undefined);};
         expect(callback).toThrow(TypeError);
     });
 
@@ -30,7 +30,7 @@ describe('Suit test for class StudentsServices', () => {
                 'email': 'Sharlene@visualpartnership.xyz',
                 'haveCertification': false
             }
-        ]
+        ];
 
         let result = StudentsServices.getMailsByhaveCertification(students);
         expect(result).not.toBeUndefined();
@@ -40,10 +40,10 @@ describe('Suit test for class StudentsServices', () => {
     });  
 
     test('4.- Method filterStudentsByCredits, pass params null and undefined', () => {
-        let callback = () => {StudentsServices.filterStudentsByCredits(null, null, null);}
+        let callback = () => {StudentsServices.filterStudentsByCredits(null, null, null);};
         expect(callback).toThrow(TypeError);
 
-        callback = () => {StudentsServices.filterStudentsByCredits(undefined, undefined, undefined);}
+        callback = () => {StudentsServices.filterStudentsByCredits(undefined, undefined, undefined);};
         expect(callback).toThrow(TypeError);
     });
 
@@ -84,5 +84,5 @@ describe('Suit test for class StudentsServices', () => {
         result =  StudentsServices.filterStudentsByCredits(students, 500, 'unknow');
         expect(result).not.toBeUndefined();
         expect(result.length).toBe(0);
-    })
+    });
 });

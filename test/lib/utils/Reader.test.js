@@ -2,10 +2,10 @@ const Reader = require('../../../lib/utils/Reader');
 
 describe('Test Suite for class Reader',() => {
     test('1.- Method loadJson, pass params null and undefined', () => {
-        let callback = () => {Reader.loadJson(null);}
+        let callback = () => {Reader.loadJson(null);};
         expect(callback).toThrow(/Received null/);
 
-        callback = () => {Reader.loadJson(undefined);}
+        callback = () => {Reader.loadJson(undefined);};
         expect(callback).toThrow(/Received undefined/);
     });
 
@@ -16,8 +16,8 @@ describe('Test Suite for class Reader',() => {
     });
 
     test('3. Method loadJson, pass path no valid', () => {
-        const callback = () => {Reader.loadJson(`students_${new Date().valueOf()}.json`);}
-        expect(callback).toThrow(/no such file/)
+        const callback = () => {Reader.loadJson(`students_${new Date().valueOf()}.json`);};
+        expect(callback).toThrow(/no such file/);
 
     });
 });

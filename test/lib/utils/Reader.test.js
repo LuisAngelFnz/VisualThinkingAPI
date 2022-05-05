@@ -6,7 +6,7 @@ describe('Test Suite for class Reader',() => {
         expect(callback).toThrow(/Received null|argument must be one of type string/);
 
         callback = () => {Reader.loadJson(undefined);};
-        expect(callback).toThrow(/Received undefined/);
+        expect(callback).toThrow(/Received undefined|argument must be one of type string/);
     });
 
     test('2.- Method loadJson, pass param json OK', () => {

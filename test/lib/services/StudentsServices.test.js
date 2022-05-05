@@ -56,7 +56,7 @@ describe('Suit test for class StudentsServices', () => {
 
         let result =  StudentsServices.filterStudentsByCredits(students, 500, 'e');
         expect(result).not.toBeUndefined();
-        expect(result.length).not.toBe(1);
+        expect(result.length).toBe(1);
         expect(result[0].credits).toBe(500);
 
         result =  StudentsServices.filterStudentsByCredits(students, 500, 'gte');
@@ -80,5 +80,9 @@ describe('Suit test for class StudentsServices', () => {
         expect(result).not.toBeUndefined();
         expect(result.length).toBe(1);
         expect(result[0].credits).toBe(400);
+
+        result =  StudentsServices.filterStudentsByCredits(students, 500, 'unknow');
+        expect(result).not.toBeUndefined();
+        expect(result.length).toBe(0);
     })
 });

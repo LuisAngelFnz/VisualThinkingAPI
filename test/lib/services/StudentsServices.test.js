@@ -9,7 +9,10 @@ describe('Suit test for class StudentsServices', () => {
     });
 
     test('2.- Method getMailsByhaveCertification, pass null and undefined params', () => {
-        const callback = () => {StudentsServices.getMailsByhaveCertification(null,null)};
+        let callback = () => {StudentsServices.getMailsByhaveCertification(null,null)};
+        expect(callback).toThrow(TypeError);
+
+        callback = () => {StudentsServices.getMailsByhaveCertification(undefined,undefined)};
         expect(callback).toThrow(TypeError);
     });
 });
